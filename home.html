@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script
+    src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="cursor"></div>
+    <nav>
+        <h1>Front-end Developer Jay</h1>
+            <ul class="nav-links">
+                <li onclick="location.href='home.html';">Home</li>
+                <li onclick="location.href='work.html';">Work</li>
+                <li onclick="location.href='contact.html';">Contact</li>
+                <li onclick="location.href='profile.html';">Profile</li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-box-home">
+        <div class="carousel-container">
+            <div class="carousel-wrapper">
+              <img src="image1.jpg" alt="Image 1">
+              <img src="image2.jpg" alt="Image 2">
+              <img src="image3.jpg" alt="Image 3">
+            </div>
+        </div>
+        <div style="flex-grow : 1"></div>
+        <div class="right-box-container">
+            <div class="right-box">
+                <h1>Introduce</h1>
+                <div class="profile-box-container">
+                    <div class="profile-box introduce">
+                        <p>Hello, I'm Lee JaeGyeom, a front-end developer who loves new challenges and wants to live by developing from myself and others. I think people should know how to see the world widely, and I want to be a person who experiences various things and has a good influence. Thank you :)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-box">
+                <h1>Profile</h1>
+                <div class="profile-box-container">
+                    <div class="profile-box">
+                        <p>Age</p>
+                        <p>Location</p>
+                        <p>School</p>
+                        <p>Major</p>
+                        <p>Experience</p>
+                    </div>
+                    <div class="profile-detail">
+                        <p>12. 29. 97</p>
+                        <p>Yeonhui-dong, Seodaemun-gu, Seoul</p>
+                        <p>Sungkyunkwan Univ</p>
+                        <p>System Management Engineering</p>
+                        <p>Newcomer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-box">
+                <h1>Skills</h1>
+                <div class="skill-box">
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>JAVASCRIPT</p>
+                    <p>REACT</p>
+                    <p>REDUX</p>
+                    <p>JQUERY</p>
+                    <p>SAAS</p>
+                    <p>GITHUB</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

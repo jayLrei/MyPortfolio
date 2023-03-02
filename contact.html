@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/
+6.2.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script
+    src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="cursor"></div>
+    <nav>
+        <h1>Front-end Developer Jay</h1>
+            <ul class="nav-links">
+                <li onclick="location.href='home.html';">Home</li>
+                <li onclick="location.href='work.html';">Work</li>
+                <li onclick="location.href='contact.html';">Contact</li>
+                <li onclick="location.href='profile.html';">Profile</li>
+            </ul>
+    </nav>
+    <div class="main-box-contact">
+
+        <div class="contact-left-box">
+            <div class="contact-left-box-img">
+                <img src="image4.png" alt="Image 2">
+            </div>
+        </div>
+
+        
+        <div class="right-box-container-contact">
+            
+            <div style="flex-grow: 1;"></div>
+            <div class="right-box-contact">
+                <h1 class="links">Phone</h1>
+                <div class="profile-box-container">
+                    <div class="contact-detail">
+                        <p class="links">+82 10-3967-5367</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-box-contact">
+                <h1 class="links">E-mail</h1>
+                <div class="profile-box-container">
+                    <div class="contact-detail">
+                        <p class="links">worua97@naver.com</p>
+                        <p class="links">thfpdhk1@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-box-contact">
+                <h1 class="links">Blog</h1>
+                <div class="profile-box-container">
+                    <div class="contact-detail">
+                        <p class="links"><a href="https://blog.naver.com/worua97" target='_blank'>blog.naver.com/worua97</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-box-contact">
+                <h1 class="links">Github</h1>
+                <div class="profile-box-container">
+                    <div class="contact-detail">
+                        <p class="links"><a href="https://github.com/jayLrei" target='_blank'>https://github.com/jayLrei</a></p>
+                    </div>
+                </div>
+            </div>
+            <div style="flex-grow: 1;"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script>
+        let Links = document.querySelectorAll('.links');
+
+        console.log(Links);
+
+        Links.forEach( link => {
+            link.addEventListener("mouseleave", () => {
+            mouseCursor.classList.remove("link-grow");
+            link.classList.remove('hovered-link');
+        });
+        link.addEventListener("mouseover", () => {
+            mouseCursor.classList.add("link-grow");
+            link.classList.add('hovered-link');
+        });
+        })
+    </script>
+</body>
+</html>

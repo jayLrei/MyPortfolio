@@ -23,7 +23,7 @@ nav{
 .cursor {
   width: 3rem;
   height: 3rem;
-  border: 2px solid black;
+  border: 1.5px solid rgb(0, 0, 0);
   border-radius: 50%;
   position: absolute;
   transform : translate(-50%,-50%);
@@ -42,8 +42,10 @@ nav{
     color : white;
     transform: all 0.3s;
 }
-
-.main-box {
+.none {
+    display : none;
+}
+.main-box-home {
     width: 95%;
     height: 80vh;
     margin: auto;
@@ -68,8 +70,76 @@ nav{
     height: 100%;
     object-fit: cover;
   }
-  
   .right-box-container {
     width: 60vw;
     height: 100%;
+    border-top: 1px solid black;
   }
+  .right-box > h1 {
+    color: #6d1515;
+    font-family: 'Karla', sans-serif;
+  }
+  .profile-box-container {
+    display: flex;
+  }
+  .profile-box {
+    margin-right: 7rem;
+    font-weight: 900;
+  }
+  .skill-box > p {
+    margin-right: 5px;
+    display: inline-block;  
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid #b15555;
+    border-radius: 30px;
+  }
+  .introduce > p {
+    letter-spacing: 0.5px;
+    line-height: 1.5rem;
+  }
+.main-box-contact {
+    width: 95%;
+    height: 80vh;
+    margin: auto;
+    display: flex;
+    flex-direction : column;
+    border-top : 1px solid black;
+}
+.contact-left-box {
+    width: 100%;
+    height: 40vh;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin: auto;
+}
+.contact-left-box-img {
+    width : 200px;
+    height: 200px;
+    margin: auto;
+}
+.contact-left-box-img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.contact-detail {
+    width: 20vw;
+    height: 100%;
+}
+.right-box-container-contact {
+    width: 100%;
+    height: 100%;
+    display: flex;
+     margin: auto;
+}
+.right-box-contact {
+    text-align: center;
+}
+a { text-decoration: none; color: black; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:focus { text-decoration: none; }
+a:hover, a:active { text-decoration: none; }
