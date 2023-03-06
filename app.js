@@ -19,6 +19,8 @@ navLinks.forEach( link => {
     });
 })
 
+
+
 //캐러셀
 
 const carousel = document.querySelector('.carousel-container');

@@ -118,6 +118,7 @@ nav{
     width : 200px;
     height: 200px;
     margin: auto;
+    z-index: -4;
 }
 .contact-left-box-img > img {
     width: 100%;
