@@ -24,9 +24,7 @@ navLinks.forEach( link => {
 //캐러셀
 
 const carousel = document.querySelector('.carousel-container');
-const wrapper = carousel.querySelector('.carousel-wrapper');
-const prevBtn = carousel.querySelector('.prev-btn');
-const nextBtn = carousel.querySelector('.next-btn');
+const wrapper = document.querySelector('.carousel-wrapper');
 const images = wrapper.querySelectorAll('img');
 const imageWidth = images[0].offsetWidth;
 let position = -imageWidth;
@@ -44,24 +42,40 @@ function moveSlides() {
 
 let slideInterval = setInterval(moveSlides, 3000);
 
-prevBtn.addEventListener('click', () => {
-  clearInterval(slideInterval);
-  if (position === 0) {
-    position = -imageWidth * 2;
-  } else {
-    position += imageWidth;
-  }
-  wrapper.style.transform = `translateX(${position}px)`;
-  slideInterval = setInterval(moveSlides, 3000);
+
+
+//work페이지 캐러셀
+const slides = document.querySelector(".slides");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+let counter = 1;
+const size = slides.clientWidth / 5;
+
+slides.style.transform = `translateX(${-size * counter}px)`;
+
+nextBtn.addEventListener("click", () => {
+  if (counter >= slides.children.length - 1) return;
+  slides.style.transition = "transform 0.5s ease-in-out";
+  counter++;
+  slides.style.transform = `translateX(${-size * counter}px)`;
 });
 
-nextBtn.addEventListener('click', () => {
-  clearInterval(slideInterval);
-  if (position === -imageWidth * 2) {
-    position = 0;
-  } else {
-    position -= imageWidth;
+prevBtn.addEventListener("click", () => {
+  if (counter <= 0) return;
+  slides.style.transition = "transform 0.5s ease-in-out";
+  counter--;
+  slides.style.transform = `translateX(${-size * counter}px)`;
+});
+
+slides.addEventListener("transitionend", () => {
+  if (slides.children[counter].id === "lastClone") {
+    slides.style.transition = "none";
+    counter = slides.children.length - 2;
+    slides.style.transform = `translateX(${-size * counter}px)`;
   }
-  wrapper.style.transform = `translateX(${position}px)`;
-  slideInterval = setInterval(moveSlides, 3000);
+  if (slides.children[counter].id === "firstClone") {
+    slides.style.transition = "none";
+    counter = slides.children.length - counter;
+    slides.style.transform = `translateX(${-size * counter}px)`;
+  }
 });
