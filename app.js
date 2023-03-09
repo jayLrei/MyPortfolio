@@ -43,8 +43,3 @@ function moveSlides() {
 let slideInterval = setInterval(moveSlides, 3000);
 
 
-
-//work페이지 캐러셀
-
-
-
